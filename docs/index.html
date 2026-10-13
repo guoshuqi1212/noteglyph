@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="NoteGlyph · 图见：把书和论文里的观点，画成有出处、语义统一的极简机制卡片。Visual notes for books and papers, with sources attached." />
+  <title>NoteGlyph · 图见</title>
+  <style>
+    :root {
+      --bg:#edf1ec; --card:#fbfcfa; --ink:#1b332a; --ink-soft:#476052; --green:#286449;
+      --gray-text:#7d8a81; --border:#d6dfd7; --focus:#4b8865;
+      --serif:"Songti SC","STSong","Noto Serif CJK SC","Noto Serif SC",Georgia,serif;
+      --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+      --mono:ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#111c17; --card:#1a2a21; --ink:#eaf1e8; --ink-soft:#b7c8bb; --green:#a5d6b4; --gray-text:#a0ada3; --border:#344b3b; --focus:#a7d7ba; }
+    }
+    *,*::before,*::after { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.7 var(--sans); -webkit-font-smoothing:antialiased; }
+    a { color:inherit; }
+    a:focus-visible { outline:2px solid var(--focus); outline-offset:4px; }
+    .shell { max-width:1080px; margin:0 auto; padding:64px 32px 72px; }
+    .eyebrow { display:flex; gap:13px; align-items:center; letter-spacing:.18em; font-size:11px; font-weight:700; color:var(--ink-soft); }
+    .eyebrow::before { content:""; width:27px; height:1px; background:var(--green); }
+    h1 { font-family:var(--serif); font-weight:800; font-size:clamp(44px,7vw,84px); letter-spacing:-.04em; line-height:1.1; margin:22px 0 14px; }
+    h1 span { color:var(--green); font-weight:600; }
+    .lead { max-width:640px; margin:0; font-size:17px; line-height:1.85; color:var(--ink-soft); }
+    .lead-en { max-width:640px; margin:8px 0 0; font-size:14px; color:var(--gray-text); }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-flex; align-items:center; padding:9px 18px; border-radius:50px; border:1px solid var(--border); text-decoration:none; font-size:14px; color:var(--ink-soft); }
+    .btn.primary { background:var(--ink); color:var(--card); border-color:var(--ink); }
+    .btn:hover { border-color:var(--green); }
+    .demos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-top:56px; }
+    .demo { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--border); border-radius:17px; overflow:hidden; text-decoration:none; }
+    .demo img { display:block; width:100%; height:auto; aspect-ratio:1164/624; object-fit:cover; object-position:top left; border-bottom:1px solid var(--border); background:var(--bg); }
+    .demo-body { padding:18px 22px 20px; }
+    .demo-kicker { font:600 11px var(--mono); letter-spacing:.1em; color:var(--green); }
+    .demo-title { font-family:var(--serif); font-weight:800; font-size:22px; margin:6px 0 4px; }
+    .demo-sub { font-size:13px; color:var(--gray-text); margin:0; }
+    .demo:hover .demo-title { color:var(--green); }
+    .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-top:56px; padding-top:28px; border-top:1px solid var(--border); }
+    .step-num { font:600 13px var(--mono); color:var(--green); }
+    .step h2 { font-family:var(--serif); font-size:18px; margin:6px 0 6px; }
+    .step p { margin:0; font-size:13.5px; color:var(--ink-soft); line-height:1.8; }
+    footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--border); font-size:12px; color:var(--gray-text); }
+    @media (max-width:760px) {
+      .shell { padding:40px 18px 56px; }
+      .demos, .steps { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="eyebrow">NOTEGLYPH · AGENT SKILL</div>
+    <h1>NoteGlyph <span>图见</span></h1>
+    <p class="lead">把书和论文里的观点，画成有出处、语义统一的极简机制卡片：一眼能懂，容易记住，还能一张张接着往下做。</p>
+    <p class="lead-en">Visual notes for books and papers: one claim per card, one mechanism diagram, the source attached.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/guoshuqi1212/noteglyph">GitHub ↗</a>
+      <a class="btn" href="lunyu.html">中文示例 · 论语</a>
+      <a class="btn" href="meditations.html">English demo · Meditations</a>
+    </div>
+
+    <section class="demos" aria-label="示例 / Demos">
+      <a class="demo" href="lunyu.html">
+        <img src="preview.png" alt="《论语》示例卡片：只学不思与只思不学；别人的长处和短处" loading="lazy" />
+        <div class="demo-body">
+          <div class="demo-kicker">中文 · 8 条 · 5 张卡</div>
+          <div class="demo-title">《论语》</div>
+          <p class="demo-sub">学习、施教与做事。原文节选，逐句核对。</p>
+        </div>
+      </a>
+      <a class="demo" href="meditations.html">
+        <img src="preview-en.png" alt="Meditations demo cards: Pain passes through a judgment; Outer retreats need a journey" loading="lazy" />
+        <div class="demo-body">
+          <div class="demo-kicker">English · 6 passages · 4 cards</div>
+          <div class="demo-title">Meditations</div>
+          <p class="demo-sub">Marcus Aurelius, tr. George Long (1862). Verbatim, public domain.</p>
+        </div>
+      </a>
+    </section>
+
+    <section class="steps" aria-label="怎么用 / How it works">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h2>装进你的 Agent</h2>
+        <p>Claude Code、Codex、Cursor 等都能用：<code>npx skills add guoshuqi1212/noteglyph</code></p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h2>给它一本书或一篇论文</h2>
+        <p>它先核对原文、挑出画得出机制的观点，再按固定的图形语义出卡。</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h2>拿到网页、数据和图片</h2>
+        <p>单文件 HTML、可续写的 JSON，每张卡都能一键存成 PNG。</p>
+      </div>
+    </section>
+
+    <footer>MIT License · 示例原文均为公版：《论语》；Marcus Aurelius, <i>Meditations</i>, tr. George Long (1862).</footer>
+  </main>
+</body>
+</html>

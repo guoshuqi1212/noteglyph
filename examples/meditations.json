@@ -1,0 +1,163 @@
+{
+  "book": {
+    "lang": "en",
+    "kind": "book",
+    "title": "Meditations",
+    "subtitle": "Marcus Aurelius · tr. George Long, 1862",
+    "volume": 1,
+    "intro": "Six passages from Marcus Aurelius on judgment, retreat and obstacles. Four are drawn as mechanism cards; two stay in the outline for now. Quotations are verbatim from George Long’s public-domain translation.",
+    "source_name": "Thoughts of Marcus Aurelius Antoninus, tr. George Long (Project Gutenberg #15877)",
+    "source_url": "https://www.gutenberg.org/ebooks/15877",
+    "editorial_note": "Card titles, summaries and diagrams are the editor’s reading, not Marcus’s words. Book and section numbers follow Long’s translation."
+  },
+  "topics": {
+    "Judgment": "Where disturbance comes from, and how an opinion can be revised.",
+    "Retreat": "Finding quiet without going anywhere.",
+    "Obstacles": "What a hindrance can and cannot stop."
+  },
+  "outline_entries": [
+    {
+      "number": 1,
+      "topic": "Judgment",
+      "title": "Pain passes through a judgment, and that judgment is yours",
+      "summary": "The external thing is separated from the opinion about it; the opinion is in our power.",
+      "source": {
+        "locator": "Book VIII, 47",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 2,
+      "topic": "Retreat",
+      "title": "Outer retreats need a journey; the inner one is always open",
+      "summary": "Country houses, sea-shores and mountains versus retiring into one’s own soul.",
+      "source": {
+        "locator": "Book IV, 3",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 3,
+      "topic": "Obstacles",
+      "title": "The mind turns a hindrance into a help on the road",
+      "summary": "Others may impede the act, not the disposition that adapts to them.",
+      "source": {
+        "locator": "Book V, 20",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 4,
+      "topic": "Judgment",
+      "title": "Changing your mind when corrected is still an act of your own",
+      "summary": "Following correction is consistent with freedom, if the persuasion is about what is just.",
+      "source": {
+        "locator": "Book VIII, 16; Book IV, 12",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 5,
+      "topic": "Retreat",
+      "title": "The good is found within, by digging again and again",
+      "summary": "“Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.” Not yet carded: a candidate for an accumulation path, but the text gives no stages to draw.",
+      "source": {
+        "locator": "Book VII, 59",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 6,
+      "topic": "Obstacles",
+      "title": "Expect difficult people before the day begins",
+      "summary": "The morning rehearsal of meeting “the busybody, the ungrateful, arrogant…” and why they cannot injure you. Not yet carded: the argument rests on kinship and reason, which needs more than one diagram.",
+      "source": {
+        "locator": "Book II, 1",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "number": 1,
+      "topic": "Judgment",
+      "title": [
+        "Pain passes through a judgment,",
+        "and that judgment is yours"
+      ],
+      "summary": "Marcus separates the external thing from the opinion we form about it and locates the disturbance in the opinion. Because the judgment is ours, it is “in thy power to wipe out this judgment now.” The same section adds a limit: when an obstacle is truly beyond us, “the cause of its not being done depends not on thee.”",
+      "diagram_alt": "Left of a dashed divider, the event; right of it, a green box for your judgment followed by disturbance. A green arrow rises from the you circle to the judgment box: you can wipe it out now.",
+      "diagram_svg": "<text x=\"85\" y=\"34\" text-anchor=\"middle\" class=\"sm\">outside you</text>\n<text x=\"380\" y=\"34\" text-anchor=\"middle\" class=\"sm\">inside you</text>\n<line x1=\"172\" y1=\"16\" x2=\"172\" y2=\"212\" class=\"grey-stroke dash\" stroke-width=\"1.2\"/>\n<rect x=\"22\" y=\"88\" width=\"126\" height=\"44\" rx=\"10\" class=\"grey-stroke-strong\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"85\" y=\"115\" text-anchor=\"middle\" class=\"mid\">the event</text>\n<line x1=\"152\" y1=\"110\" x2=\"200\" y2=\"110\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/>\n<polygon points=\"208.0,110.0 201.0,114.3 201.0,105.7\" class=\"grey-shape\"/>\n<rect x=\"212\" y=\"84\" width=\"140\" height=\"52\" rx=\"10\" class=\"green-stroke\" stroke-width=\"1.8\" fill=\"none\"/>\n<text x=\"282\" y=\"115\" text-anchor=\"middle\" class=\"strong\">your judgment</text>\n<line x1=\"356\" y1=\"110\" x2=\"404\" y2=\"110\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/>\n<polygon points=\"412.0,110.0 405.0,114.3 405.0,105.7\" class=\"grey-shape\"/>\n<text x=\"476\" y=\"106\" text-anchor=\"middle\" class=\"mid\">disturbance</text>\n<text x=\"476\" y=\"124\" text-anchor=\"middle\" class=\"tiny\">“pained”</text>\n<circle cx=\"282\" cy=\"192\" r=\"19\" class=\"you\"/>\n<text x=\"282\" y=\"196.5\" text-anchor=\"middle\" class=\"you-tx\">you</text>\n<line x1=\"282\" y1=\"172\" x2=\"282\" y2=\"148\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"282.0,140.0 286.3,147.0 277.7,147.0\" class=\"green-fill\"/>\n<text x=\"306\" y=\"166\" class=\"tiny\">can wipe it out now</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgment about it. And it is in thy power to wipe out this judgment now.",
+        "original": ""
+      },
+      "source": {
+        "locator": "Book VIII, 47 (tr. Long)",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 2,
+      "topic": "Retreat",
+      "title": [
+        "Outer retreats need a journey;",
+        "the inner one is always open"
+      ],
+      "summary": "People look for quiet in country houses, on sea-shores and in the mountains. Marcus calls this the habit of “the most common sort of men”, because retiring into one’s own soul is available whenever one chooses. He pairs this retreat with “brief and fundamental” principles to return to, which do the actual work of restoring calm.",
+      "diagram_alt": "Left: three gray capsules for a country house, sea-shore and mountains, each a journey. Right: the you circle inside a pale green field of brief, fundamental principles, available whenever you choose.",
+      "diagram_svg": "<text x=\"140\" y=\"24\" text-anchor=\"middle\" class=\"sm\">places people seek</text>\n<text x=\"420\" y=\"24\" text-anchor=\"middle\" class=\"strong\">into thyself</text>\n<line x1=\"280\" y1=\"14\" x2=\"280\" y2=\"214\" class=\"grey-stroke dash\" stroke-width=\"1.2\"/>\n<rect x=\"64\" y=\"46\" width=\"152\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/>\n<rect x=\"64\" y=\"92\" width=\"152\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/>\n<rect x=\"64\" y=\"138\" width=\"152\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/>\n<text x=\"140\" y=\"68\" text-anchor=\"middle\" class=\"sm\">house in the country</text>\n<text x=\"140\" y=\"114\" text-anchor=\"middle\" class=\"sm\">sea-shore</text>\n<text x=\"140\" y=\"160\" text-anchor=\"middle\" class=\"sm\">mountains</text>\n<text x=\"140\" y=\"202\" text-anchor=\"middle\" class=\"tiny\">a journey every time</text>\n<circle cx=\"420\" cy=\"110\" r=\"74\" class=\"wash-fill\"/>\n<circle cx=\"420\" cy=\"92\" r=\"22\" class=\"you\"/>\n<text x=\"420\" y=\"96.5\" text-anchor=\"middle\" class=\"you-tx\">you</text>\n<text x=\"420\" y=\"136\" text-anchor=\"middle\" class=\"tiny\">brief, fundamental</text>\n<text x=\"420\" y=\"150\" text-anchor=\"middle\" class=\"tiny\">principles</text>\n<text x=\"420\" y=\"212\" text-anchor=\"middle\" class=\"strong\">whenever you choose</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "Men seek retreats for themselves, houses in the country, sea-shores, and mountains; and thou too art wont to desire such things very much. But this is altogether a mark of the most common sort of men, for it is in thy power whenever thou shalt choose to retire into thyself.",
+        "original": ""
+      },
+      "source": {
+        "locator": "Book IV, 3 (tr. Long)",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 3,
+      "topic": "Obstacles",
+      "title": [
+        "The mind turns a hindrance",
+        "into a help on the road"
+      ],
+      "summary": "Other people can impede what Marcus does, but not his “affects and disposition”, which act conditionally and adapt. The claim is narrow: an obstacle may stop a particular act; it cannot stop the disposition from using the obstacle as material for the next one.",
+      "diagram_alt": "A gray road from you runs into a gray block labelled hindrance and stops. A dotted green path climbs onto the block, uses it as a step and continues up to an aid, a furtherance.",
+      "diagram_svg": "<line x1=\"62\" y1=\"170\" x2=\"226\" y2=\"170\" class=\"grey-stroke-strong\" stroke-width=\"2.4\"/>\n<circle cx=\"42\" cy=\"170\" r=\"19\" class=\"you\"/>\n<text x=\"42\" y=\"174.5\" text-anchor=\"middle\" class=\"you-tx\">you</text>\n<rect x=\"228\" y=\"122\" width=\"62\" height=\"48\" rx=\"4\" class=\"grey-shape\"/>\n<text x=\"259\" y=\"192\" text-anchor=\"middle\" class=\"sm\">hindrance</text>\n<text x=\"150\" y=\"192\" text-anchor=\"middle\" class=\"tiny\">the act is impeded</text>\n<path d=\"M 56 156 C 120 150 150 130 200 128 C 220 127 226 118 236 116 L 284 116 C 340 112 400 76 470 58\" class=\"green-stroke dash\" stroke-width=\"2.2\" fill=\"none\"/>\n<polygon points=\"484.0,54.0 478.4,60.0 476.1,51.6\" class=\"green-fill\"/>\n<circle cx=\"132\" cy=\"144\" r=\"3.5\" class=\"green-fill\"/><circle cx=\"260\" cy=\"116\" r=\"3.5\" class=\"green-fill\"/><circle cx=\"380\" cy=\"88\" r=\"3.5\" class=\"green-fill\"/>\n<text x=\"380\" y=\"118\" class=\"tiny\">used as a step</text>\n<text x=\"500\" y=\"40\" text-anchor=\"end\" class=\"strong\">an aid, a furtherance</text>\n<text x=\"132\" y=\"118\" text-anchor=\"middle\" class=\"tiny\">disposition adapts</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "the mind converts and changes every hindrance to its activity into an aid; and so that which is a hindrance is made a furtherance to an act; and that which is an obstacle on the road helps us on this road.",
+        "original": ""
+      },
+      "source": {
+        "locator": "Book V, 20 (tr. Long)",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      }
+    },
+    {
+      "number": 4,
+      "topic": "Judgment",
+      "title": [
+        "Changing your mind when corrected",
+        "is still an act of your own"
+      ],
+      "summary": "Following the person who corrects you is “as consistent with freedom” as persisting in error, because the change is made by your own movement, judgment and understanding. Book IV, 12 adds a filter: change “only from a certain persuasion, as of what is just or of common advantage … not because it appears pleasant or brings reputation.”",
+      "diagram_alt": "An old opinion becomes a revised opinion. Above a gray dashed filter line, “just, common good” passes down to the revision while “pleasant, reputation” is stopped. A dotted green line returns to you: still your own judgment.",
+      "diagram_svg": "<line x1=\"250\" y1=\"98\" x2=\"540\" y2=\"98\" class=\"grey-stroke dash\" stroke-width=\"1.4\"/>\n<text x=\"540\" y=\"114\" text-anchor=\"end\" class=\"tiny\">filter (IV.12)</text>\n<rect x=\"252\" y=\"30\" width=\"154\" height=\"34\" rx=\"17\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"329\" y=\"51\" text-anchor=\"middle\" class=\"strong\">just · common good</text>\n<rect x=\"414\" y=\"30\" width=\"136\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/>\n<text x=\"482\" y=\"51\" text-anchor=\"middle\" class=\"sm\">pleasant · reputation</text>\n<line x1=\"329\" y1=\"66\" x2=\"329\" y2=\"136\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"329.0,145.0 324.7,138.0 333.3,138.0\" class=\"green-fill\"/>\n<line x1=\"482\" y1=\"66\" x2=\"482\" y2=\"88\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/>\n<line x1=\"472\" y1=\"92\" x2=\"492\" y2=\"92\" class=\"grey-stroke-strong\" stroke-width=\"2.4\"/>\n<circle cx=\"46\" cy=\"166\" r=\"19\" class=\"you\"/>\n<text x=\"46\" y=\"170.5\" text-anchor=\"middle\" class=\"you-tx\">you</text>\n<rect x=\"84\" y=\"148\" width=\"116\" height=\"36\" rx=\"9\" class=\"grey-stroke-strong\" stroke-width=\"1.4\" fill=\"none\"/>\n<text x=\"142\" y=\"171\" text-anchor=\"middle\" class=\"mid\">old opinion</text>\n<line x1=\"204\" y1=\"166\" x2=\"252\" y2=\"166\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"260.0,166.0 253.0,170.3 253.0,161.7\" class=\"green-fill\"/>\n<rect x=\"264\" y=\"148\" width=\"130\" height=\"36\" rx=\"9\" class=\"green-stroke\" stroke-width=\"1.6\" fill=\"none\"/>\n<text x=\"329\" y=\"171\" text-anchor=\"middle\" class=\"strong\">revised opinion</text>\n<path d=\"M 329 186 C 322 206 90 206 56 186\" class=\"green-stroke dash\" stroke-width=\"1.6\" fill=\"none\"/>\n<polygon points=\"52.0,182.0 60.1,183.4 54.4,189.9\" class=\"green-fill\"/>\n<text x=\"190\" y=\"222\" text-anchor=\"middle\" class=\"tiny\">still your own judgment</text>\n<text x=\"238\" y=\"44\" text-anchor=\"end\" class=\"tiny\">someone</text>\n<text x=\"238\" y=\"58\" text-anchor=\"end\" class=\"tiny\">sets you right:</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "Remember that to change thy opinion and to follow him who corrects thy error is as consistent with freedom as it is to persist in thy error.",
+        "original": ""
+      },
+      "source": {
+        "locator": "Book VIII, 16 (tr. Long)",
+        "url": "https://www.gutenberg.org/ebooks/15877"
+      },
+      "interpretation_note": "The filter comes from Book IV, 12; putting the two sections together is the editor’s choice."
+    }
+  ]
+}

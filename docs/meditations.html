@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="generator" content="NoteGlyph" />
+  <title>Meditations · Visual Reading Notes</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #edf1ec;
+      --card: #fbfcfa;
+      --ink: #1b332a;
+      --ink-soft: #476052;
+      --green: #286449;
+      --green-2: #4c8b66;
+      --wash: #e8f3e9;
+      --gray-shape: #a6b0aa;
+      --gray-text: #7d8a81;
+      --gray-line: #c8d1cb;
+      --border: #d6dfd7;
+      --focus: #4b8865;
+      --serif: "Songti SC","STSong","Noto Serif CJK SC","Noto Serif SC",Georgia,serif;
+      --serif-en: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Noto Serif","Liberation Serif","Songti SC","Noto Serif CJK SC",serif;
+      --sans: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+      --mono: ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#111c17;
+        --card:#1a2a21;
+        --ink:#eaf1e8;
+        --ink-soft:#b7c8bb;
+        --green:#a5d6b4;
+        --green-2:#8dc8a0;
+        --wash:#254233;
+        --gray-shape:#77857a;
+        --gray-text:#a0ada3;
+        --gray-line:#516157;
+        --border:#344b3b;
+        --focus:#a7d7ba;
+      }
+    }
+    *,*::before,*::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.65 var(--sans); -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration-thickness:1px; text-underline-offset:3px; }
+    button { font:inherit; }
+    button:focus-visible, a:focus-visible { outline:2px solid var(--focus); outline-offset:4px; }
+    .shell { max-width:1188px; margin:0 auto; padding:54px 32px 72px; }
+    .eyebrow { display:flex; gap:13px; align-items:center; letter-spacing:.18em; text-transform:uppercase; font-size:11px; font-weight:700; color:var(--ink-soft); }
+    .eyebrow::before {content:""; display:block; width:27px;height:1px;background:var(--green);}
+    .cover { padding:0 0 36px; border-bottom:1px solid var(--border); }
+    h1 { font-family:var(--serif); font-weight:800; font-size:clamp(41px, 5.6vw, 76px); letter-spacing:-.045em; line-height:1.18; margin:22px 0 12px; }
+    .h1-slash { font-size:.43em; vertical-align:middle; margin-left:.2em; font-family:Georgia,serif; font-weight:400; color:var(--green); }
+    .eng { text-transform:uppercase; font-size:11px; letter-spacing:.18em; color:var(--gray-text); font-weight:600; }
+    .cover-bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:30px; margin-top:26px; }
+    .desc { max-width:650px; margin:0; font-size:15px; line-height:1.9; color:var(--ink-soft); }
+    .cover-stats { display:flex; gap:22px; flex-shrink:0; align-items:flex-end; }
+    .stat { border-left:1px solid var(--border); padding-left:16px; }
+    .stat-number { display:block; font-family:var(--mono); font-size:27px; line-height:1.1; font-weight:600; color:var(--green); }
+    .stat-label { font-size:11px; color:var(--gray-text); letter-spacing:.07em; }
+    .legend { display:flex; align-items:center; gap:13px 23px; padding:26px 0 21px; flex-wrap:wrap; border-bottom:1px solid var(--border); }
+    .legend[hidden], .legend-item[hidden] { display:none; }
+    .legend-intro {font-size:10px;letter-spacing:.14em;font-weight:750;color:var(--gray-text);margin-right:2px;}
+    .legend-item {display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-soft); white-space:nowrap; }
+    .legend svg {width:32px;height:23px;overflow:visible;}
+    .toolbar { display:flex;justify-content:space-between; align-items:center; gap:18px; padding:23px 0 27px; flex-wrap:wrap; }
+    .filters { display:flex;gap:7px;flex-wrap:wrap; }
+    .filter,.view-btn,.print-btn {background:transparent;border:1px solid transparent;padding:7px 13px;border-radius:50px;color:var(--ink-soft);cursor:pointer;transition:border-color .18s,background-color .18s,color .18s;}
+    .filter {font-size:13px;}
+    .filter:hover,.view-btn:hover,.print-btn:hover {border-color:var(--border);}
+    .filter[aria-pressed="true"] {background:var(--ink);color:var(--card);}
+    .toolbar-right {display:flex;gap:8px;align-items:center;}
+    .count {font-family:var(--mono);font-size:11px;color:var(--gray-text);margin-right:8px;}
+    .view-btn {font-size:12px;border-color:var(--border);}
+    .view-btn[aria-pressed="true"] {color:var(--green);border-color:var(--green);}
+    .print-btn {font-size:12px;}
+    .cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch;}
+    .note-card {min-width:0; background:var(--card); border:1px solid var(--border);border-radius:17px;overflow:hidden; display:flex;flex-direction:column; padding:25px 27px 23px;}
+    .note-card[hidden], .outline-row[hidden], .outline-group[hidden], .cards[hidden] {display:none !important;}
+    .card-top {display:flex;gap:11px;align-items:center; min-width:0; color:var(--gray-text); line-height:1.25; }
+    .card-number {font:600 13px/1.2 var(--mono);color:var(--green);letter-spacing:.02em;}
+    .card-book {font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .card-tag {margin-left:auto;font-size:11px;border:1px solid var(--border);color:var(--ink-soft);border-radius:4px;padding:3px 8px;line-height:1.3;white-space:nowrap;letter-spacing:.10em;}
+    .card-title { margin:27px 0 16px; font-family:var(--serif); font-weight:800; font-size:clamp(21px,2.05vw,28px); letter-spacing:-.035em; line-height:1.42; min-height:2.85em; }
+    .card-title span {display:block;}
+    .diagram-box {height:229px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:1px;}
+    .diagram {display:block;width:100%;max-width:520px;height:100%;overflow:visible;}
+    .diagram text {font-family:var(--sans);letter-spacing:.02em;}
+    .diagram .tx {fill:var(--ink-soft);font-size:14px;}
+    .diagram .sm {fill:var(--gray-text);font-size:12px;}
+    .diagram .mid {fill:var(--ink);font-size:14px;font-weight:600;}
+    .diagram .strong {fill:var(--green);font-size:14px;font-weight:650;}
+    .diagram .tiny {fill:var(--gray-text);font-size:11px;}
+    .diagram .grey-shape {fill:var(--gray-shape);}
+    .diagram .grey-stroke {stroke:var(--gray-line);}
+    .diagram .grey-stroke-strong {stroke:var(--gray-shape);}
+    .diagram .green-fill {fill:var(--green);}
+    .diagram .green-stroke {stroke:var(--green-2);}
+    .diagram .wash-fill {fill:var(--wash);}
+    .diagram .dash {stroke-dasharray:5 7;}
+    .diagram .you {fill:var(--ink);}
+    .diagram .you-tx {fill:var(--card);font-weight:700;font-size:12px;}
+    .diagram use {fill:var(--green);}
+    .diagram path,.diagram line {stroke-linecap:round;stroke-linejoin:round;}
+    .quote {display:flex;flex-direction:column;gap:7px;margin-top:21px; min-height:105px; }
+    .quote-label {display:flex;align-items:center;gap:12px;color:var(--green);font-weight:700;font-size:11px;letter-spacing:.15em;}
+    .quote-label::after {content:"";height:1px;flex:1;background:var(--border);}
+    .quote-main {font-family:var(--serif);font-weight:600;font-size:16px;color:var(--ink);margin:2px 0 0;line-height:1.55;}
+    .quote-orig {font-family:Georgia,"Liberation Serif",serif;font-style:italic;font-size:12px;line-height:1.6;color:var(--gray-text);margin:0;}
+    .card-note {font-size:12px;line-height:1.7;color:var(--gray-text);margin:10px 0 0;}
+    .source {margin-top:auto; padding-top:15px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--gray-text);font-size:11px;}
+    .source-actions {display:flex;gap:14px;align-items:center;flex-shrink:0;}
+    .source a {text-decoration:none;color:var(--green);white-space:nowrap;}
+    .source a:hover{text-decoration:underline;}
+    .save-btn {background:none;border:0;padding:0;color:var(--gray-text);font-size:11px;cursor:pointer;white-space:nowrap;}
+    .save-btn:hover {color:var(--green);}
+    .save-btn[disabled] {opacity:.5;cursor:progress;}
+    .source-chapter {white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;}
+    .outline {background:var(--card);border:1px solid var(--border);border-radius:17px;padding:8px 29px 19px;}
+    .outline-group {padding-top:21px;}
+    .outline-group + .outline-group {border-top:1px solid var(--border);margin-top:8px;}
+    .outline-group-title {display:flex;align-items:baseline;gap:15px;margin:0;color:var(--green);font-size:15px;letter-spacing:.1em;}
+    .outline-group-intro {font-size:13px;color:var(--gray-text);line-height:1.8;margin:5px 0 0;}
+    .outline[hidden] {display:none;}
+    .outline-row {display:grid;grid-template-columns:72px minmax(0,1fr);gap:15px;padding:27px 0;border-bottom:1px solid var(--border);}
+    .outline-row:last-child {border:0;}
+    .outline-num {font:600 14px var(--mono);color:var(--green);padding-top:5px;}
+    .outline-title {font-family:var(--serif);font-weight:800;font-size:19px;line-height:1.5;margin:0 0 9px;}
+    .outline-sum {color:var(--ink-soft);margin:0 0 10px;font-size:14px;line-height:1.9;max-width:870px;}
+    .outline-ref {font-size:12px;color:var(--gray-text);}
+    .outline-ref a {color:var(--green);}
+    .outline-ref b {font-weight:600;color:var(--green);margin-right:8px;}
+    .footnote {margin-top:36px;padding-top:22px;border-top:1px solid var(--border);font-size:12px;line-height:1.9;color:var(--gray-text);}
+    .footnote a {color:var(--green);}
+    .foot-kicker {font-family:var(--mono);letter-spacing:.1em;color:var(--green);font-size:11px;font-weight:650;}
+    /* English decks: Latin serif for display text, looser tracking */
+    html[lang="en"] h1 {font-family:var(--serif-en);letter-spacing:-.02em;}
+    html[lang="en"] .card-title {font-family:var(--serif-en);letter-spacing:-.01em;font-weight:700;}
+    html[lang="en"] .quote-main, html[lang="en"] .outline-title {font-family:var(--serif-en);}
+    html[lang="en"] .quote-main {font-weight:500;}
+    html[lang="en"] .card-book {font-style:italic;}
+    @media (max-width:800px) {
+      .shell {padding:34px 22px 50px;}
+      .cards {grid-template-columns:1fr;gap:15px;}
+      .cover-bottom {align-items:start;flex-direction:column;gap:24px;}
+      .cover-stats {gap:26px;}
+      .card-title {font-size:25px;}
+    }
+    @media (max-width:440px) {
+      .h1-sub {display:block;}
+      .shell {padding:29px 14px 45px;}
+      .note-card {padding:22px 18px 21px;border-radius:14px;}
+      .card-title {font-size:22px;margin:22px 0 16px;}
+      .diagram-box {height:205px;}
+      .legend {gap:13px 16px;}
+      .legend-item {font-size:11px;}
+      .outline {padding:3px 18px 9px;}
+      .outline-row {grid-template-columns:46px minmax(0,1fr);gap:10px;}
+      .toolbar-right {flex-wrap:wrap;}
+      .toolbar {gap:10px;}
+      .filter {padding:6px 11px;}
+    }
+    @media print {
+      :root {--bg:#fff;--card:#fff;--ink:#183229;--ink-soft:#476052;--green:#286449;--green-2:#4c8b66;--wash:#e8f3e9;--gray-shape:#a6b0aa;--gray-text:#7d8a81;--gray-line:#c8d1cb;--border:#d6dfd7;}
+      body {background:white;}
+      .shell {padding:0;max-width:none;}
+      .toolbar,.legend,.save-btn {display:none;}
+      .cover {padding-bottom:18px;margin-bottom:25px;}
+      h1 {font-size:40px;}
+      .cards {gap:12px;}
+      .note-card {break-inside:avoid;page-break-inside:avoid;padding:16px 20px;}
+      .card-title {font-size:19px;margin:17px 0 12px;}
+      .diagram-box {height:168px;}
+      .quote {margin-top:13px;min-height:86px;}
+      .quote-main {font-size:13px;}
+      .footnote {font-size:10px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Shared shapes. "ng-unique" is the one fixed outline for "unique ability"; diagrams reference it with <use href="#ng-unique">. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs><path id="ng-unique" d="M -25 -14 C -13 -30 4 -26 14 -18 C 29 -16 31 0 22 14 C 16 29 -2 28 -14 20 C -30 16 -31 -1 -25 -14 Z" /></defs>
+  </svg>
+  <main class="shell">
+    <header class="cover">
+      <div class="eyebrow" id="volume-label"></div>
+      <h1 id="page-title"></h1>
+      <div class="eng" id="page-subtitle"></div>
+      <div class="cover-bottom">
+        <p class="desc" id="page-intro"></p>
+        <div class="cover-stats" id="cover-stats">
+          <div class="stat"><span class="stat-number" id="stat-cards"></span><span class="stat-label" data-i18n="statCards"></span></div>
+          <div class="stat"><span class="stat-number" id="stat-topics"></span><span class="stat-label" data-i18n="statTopics"></span></div>
+        </div>
+      </div>
+    </header>
+    <aside class="legend" id="legend">
+      <span class="legend-intro">VISUAL KEY</span>
+      <span class="legend-item" data-needs="grey"><svg viewBox="0 0 32 23" aria-hidden="true"><circle cx="7" cy="12" r="5" fill="var(--gray-shape)"/><circle cx="18" cy="12" r="5" fill="var(--gray-shape)"/><circle cx="29" cy="12" r="5" fill="var(--gray-shape)"/></svg><span data-i18n="keyGrey"></span></span>
+      <span class="legend-item" data-needs="unique"><svg viewBox="0 0 32 23" aria-hidden="true"><use href="#ng-unique" transform="translate(16 11.5) scale(.38)" fill="var(--green)"/></svg><span data-i18n="keyUnique"></span></span>
+      <span class="legend-item" data-needs="explore"><svg viewBox="0 0 32 23" aria-hidden="true"><path d="M2 16 Q9 1 16 12 T30 6" stroke="var(--green)" stroke-width="1.8" fill="none" stroke-dasharray="3 4"/><circle cx="17" cy="12" r="2.5" fill="var(--green)"/></svg><span data-i18n="keyExplore"></span></span>
+      <span class="legend-item" data-needs="you"><svg viewBox="0 0 32 23" aria-hidden="true"><circle cx="16" cy="12" r="10" fill="var(--ink)"/><text x="16" y="15.5" text-anchor="middle" font-size="9" font-weight="700" fill="var(--card)" id="legend-you"></text></svg><span data-i18n="keyYou"></span></span>
+      <span class="legend-item" data-needs="wash"><svg viewBox="0 0 32 23" aria-hidden="true"><rect x="3.5" y="5.5" width="25" height="13" rx="3" fill="var(--wash)" stroke="var(--green-2)" stroke-opacity=".45"/></svg><span data-i18n="keyWash"></span></span>
+      <span class="legend-item" data-needs="divider"><svg viewBox="0 0 32 23" aria-hidden="true"><path d="M16 0 V23" stroke="var(--gray-line)" stroke-width="1.5" stroke-dasharray="4 4"/></svg><span data-i18n="keyDivider"></span></span>
+    </aside>
+    <nav class="toolbar" id="toolbar">
+      <div class="filters" id="filters"></div>
+      <div class="toolbar-right">
+        <span class="count" id="card-count"></span>
+        <button class="view-btn" id="view-switch" aria-pressed="false" type="button"></button>
+        <button class="print-btn" id="print-btn" type="button" data-i18n="print"></button>
+      </div>
+    </nav>
+    <section class="cards" id="cards"></section>
+    <section class="outline" id="outline" hidden></section>
+    <footer class="footnote">
+      <div class="foot-kicker">EDITORIAL NOTES</div>
+      <p id="editorial-note"></p>
+      <p id="source-note"></p>
+    </footer>
+  </main>
+<script>
+'use strict';
+const data = {"book":{"lang":"en","kind":"book","title":"Meditations","subtitle":"Marcus Aurelius · tr. George Long, 1862","volume":1,"intro":"Six passages from Marcus Aurelius on judgment, retreat and obstacles. Four are drawn as mechanism cards; two stay in the outline for now. Quotations are verbatim from George Long’s public-domain translation.","source_name":"Thoughts of Marcus Aurelius Antoninus, tr. George Long (Project Gutenberg #15877)","source_url":"https://www.gutenberg.org/ebooks/15877","editorial_note":"Card titles, summaries and diagrams are the editor’s reading, not Marcus’s words. Book and section numbers follow Long’s translation."},"topics":{"Judgment":"Where disturbance comes from, and how an opinion can be revised.","Retreat":"Finding quiet without going anywhere.","Obstacles":"What a hindrance can and cannot stop."},"outline_entries":[{"number":1,"topic":"Judgment","title":"Pain passes through a judgment, and that judgment is yours","summary":"The external thing is separated from the opinion about it; the opinion is in our power.","source":{"locator":"Book VIII, 47","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":2,"topic":"Retreat","title":"Outer retreats need a journey; the inner one is always open","summary":"Country houses, sea-shores and mountains versus retiring into one’s own soul.","source":{"locator":"Book IV, 3","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":3,"topic":"Obstacles","title":"The mind turns a hindrance into a help on the road","summary":"Others may impede the act, not the disposition that adapts to them.","source":{"locator":"Book V, 20","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":4,"topic":"Judgment","title":"Changing your mind when corrected is still an act of your own","summary":"Following correction is consistent with freedom, if the persuasion is about what is just.","source":{"locator":"Book VIII, 16; Book IV, 12","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":5,"topic":"Retreat","title":"The good is found within, by digging again and again","summary":"“Look within. Within is the fountain of good, and it will ever bubble up, if thou wilt ever dig.” Not yet carded: a candidate for an accumulation path, but the text gives no stages to draw.","source":{"locator":"Book VII, 59","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":6,"topic":"Obstacles","title":"Expect difficult people before the day begins","summary":"The morning rehearsal of meeting “the busybody, the ungrateful, arrogant…” and why they cannot injure you. Not yet carded: the argument rests on kinship and reason, which needs more than one diagram.","source":{"locator":"Book II, 1","url":"https://www.gutenberg.org/ebooks/15877"}}],"cards":[{"number":1,"topic":"Judgment","title":["Pain passes through a judgment,","and that judgment is yours"],"summary":"Marcus separates the external thing from the opinion we form about it and locates the disturbance in the opinion. Because the judgment is ours, it is “in thy power to wipe out this judgment now.” The same section adds a limit: when an obstacle is truly beyond us, “the cause of its not being done depends not on thee.”","diagram_alt":"Left of a dashed divider, the event; right of it, a green box for your judgment followed by disturbance. A green arrow rises from the you circle to the judgment box: you can wipe it out now.","diagram_svg":"\u003ctext x=\"85\" y=\"34\" text-anchor=\"middle\" class=\"sm\"\u003eoutside you\u003c/text\u003e\n\u003ctext x=\"380\" y=\"34\" text-anchor=\"middle\" class=\"sm\"\u003einside you\u003c/text\u003e\n\u003cline x1=\"172\" y1=\"16\" x2=\"172\" y2=\"212\" class=\"grey-stroke dash\" stroke-width=\"1.2\"/\u003e\n\u003crect x=\"22\" y=\"88\" width=\"126\" height=\"44\" rx=\"10\" class=\"grey-stroke-strong\" stroke-width=\"1.5\" fill=\"none\"/\u003e\n\u003ctext x=\"85\" y=\"115\" text-anchor=\"middle\" class=\"mid\"\u003ethe event\u003c/text\u003e\n\u003cline x1=\"152\" y1=\"110\" x2=\"200\" y2=\"110\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/\u003e\n\u003cpolygon points=\"208.0,110.0 201.0,114.3 201.0,105.7\" class=\"grey-shape\"/\u003e\n\u003crect x=\"212\" y=\"84\" width=\"140\" height=\"52\" rx=\"10\" class=\"green-stroke\" stroke-width=\"1.8\" fill=\"none\"/\u003e\n\u003ctext x=\"282\" y=\"115\" text-anchor=\"middle\" class=\"strong\"\u003eyour judgment\u003c/text\u003e\n\u003cline x1=\"356\" y1=\"110\" x2=\"404\" y2=\"110\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/\u003e\n\u003cpolygon points=\"412.0,110.0 405.0,114.3 405.0,105.7\" class=\"grey-shape\"/\u003e\n\u003ctext x=\"476\" y=\"106\" text-anchor=\"middle\" class=\"mid\"\u003edisturbance\u003c/text\u003e\n\u003ctext x=\"476\" y=\"124\" text-anchor=\"middle\" class=\"tiny\"\u003e“pained”\u003c/text\u003e\n\u003ccircle cx=\"282\" cy=\"192\" r=\"19\" class=\"you\"/\u003e\n\u003ctext x=\"282\" y=\"196.5\" text-anchor=\"middle\" class=\"you-tx\"\u003eyou\u003c/text\u003e\n\u003cline x1=\"282\" y1=\"172\" x2=\"282\" y2=\"148\" class=\"green-stroke\" stroke-width=\"2\"/\u003e\n\u003cpolygon points=\"282.0,140.0 286.3,147.0 277.7,147.0\" class=\"green-fill\"/\u003e\n\u003ctext x=\"306\" y=\"166\" class=\"tiny\"\u003ecan wipe it out now\u003c/text\u003e","quote":{"kind":"quote","text":"If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgment about it. And it is in thy power to wipe out this judgment now.","original":""},"source":{"locator":"Book VIII, 47 (tr. Long)","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":2,"topic":"Retreat","title":["Outer retreats need a journey;","the inner one is always open"],"summary":"People look for quiet in country houses, on sea-shores and in the mountains. Marcus calls this the habit of “the most common sort of men”, because retiring into one’s own soul is available whenever one chooses. He pairs this retreat with “brief and fundamental” principles to return to, which do the actual work of restoring calm.","diagram_alt":"Left: three gray capsules for a country house, sea-shore and mountains, each a journey. Right: the you circle inside a pale green field of brief, fundamental principles, available whenever you choose.","diagram_svg":"\u003ctext x=\"140\" y=\"24\" text-anchor=\"middle\" class=\"sm\"\u003eplaces people seek\u003c/text\u003e\n\u003ctext x=\"420\" y=\"24\" text-anchor=\"middle\" class=\"strong\"\u003einto thyself\u003c/text\u003e\n\u003cline x1=\"280\" y1=\"14\" x2=\"280\" y2=\"214\" class=\"grey-stroke dash\" stroke-width=\"1.2\"/\u003e\n\u003crect x=\"64\" y=\"46\" width=\"152\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/\u003e\n\u003crect x=\"64\" y=\"92\" width=\"152\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/\u003e\n\u003crect x=\"64\" y=\"138\" width=\"152\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/\u003e\n\u003ctext x=\"140\" y=\"68\" text-anchor=\"middle\" class=\"sm\"\u003ehouse in the country\u003c/text\u003e\n\u003ctext x=\"140\" y=\"114\" text-anchor=\"middle\" class=\"sm\"\u003esea-shore\u003c/text\u003e\n\u003ctext x=\"140\" y=\"160\" text-anchor=\"middle\" class=\"sm\"\u003emountains\u003c/text\u003e\n\u003ctext x=\"140\" y=\"202\" text-anchor=\"middle\" class=\"tiny\"\u003ea journey every time\u003c/text\u003e\n\u003ccircle cx=\"420\" cy=\"110\" r=\"74\" class=\"wash-fill\"/\u003e\n\u003ccircle cx=\"420\" cy=\"92\" r=\"22\" class=\"you\"/\u003e\n\u003ctext x=\"420\" y=\"96.5\" text-anchor=\"middle\" class=\"you-tx\"\u003eyou\u003c/text\u003e\n\u003ctext x=\"420\" y=\"136\" text-anchor=\"middle\" class=\"tiny\"\u003ebrief, fundamental\u003c/text\u003e\n\u003ctext x=\"420\" y=\"150\" text-anchor=\"middle\" class=\"tiny\"\u003eprinciples\u003c/text\u003e\n\u003ctext x=\"420\" y=\"212\" text-anchor=\"middle\" class=\"strong\"\u003ewhenever you choose\u003c/text\u003e","quote":{"kind":"quote","text":"Men seek retreats for themselves, houses in the country, sea-shores, and mountains; and thou too art wont to desire such things very much. But this is altogether a mark of the most common sort of men, for it is in thy power whenever thou shalt choose to retire into thyself.","original":""},"source":{"locator":"Book IV, 3 (tr. Long)","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":3,"topic":"Obstacles","title":["The mind turns a hindrance","into a help on the road"],"summary":"Other people can impede what Marcus does, but not his “affects and disposition”, which act conditionally and adapt. The claim is narrow: an obstacle may stop a particular act; it cannot stop the disposition from using the obstacle as material for the next one.","diagram_alt":"A gray road from you runs into a gray block labelled hindrance and stops. A dotted green path climbs onto the block, uses it as a step and continues up to an aid, a furtherance.","diagram_svg":"\u003cline x1=\"62\" y1=\"170\" x2=\"226\" y2=\"170\" class=\"grey-stroke-strong\" stroke-width=\"2.4\"/\u003e\n\u003ccircle cx=\"42\" cy=\"170\" r=\"19\" class=\"you\"/\u003e\n\u003ctext x=\"42\" y=\"174.5\" text-anchor=\"middle\" class=\"you-tx\"\u003eyou\u003c/text\u003e\n\u003crect x=\"228\" y=\"122\" width=\"62\" height=\"48\" rx=\"4\" class=\"grey-shape\"/\u003e\n\u003ctext x=\"259\" y=\"192\" text-anchor=\"middle\" class=\"sm\"\u003ehindrance\u003c/text\u003e\n\u003ctext x=\"150\" y=\"192\" text-anchor=\"middle\" class=\"tiny\"\u003ethe act is impeded\u003c/text\u003e\n\u003cpath d=\"M 56 156 C 120 150 150 130 200 128 C 220 127 226 118 236 116 L 284 116 C 340 112 400 76 470 58\" class=\"green-stroke dash\" stroke-width=\"2.2\" fill=\"none\"/\u003e\n\u003cpolygon points=\"484.0,54.0 478.4,60.0 476.1,51.6\" class=\"green-fill\"/\u003e\n\u003ccircle cx=\"132\" cy=\"144\" r=\"3.5\" class=\"green-fill\"/\u003e\u003ccircle cx=\"260\" cy=\"116\" r=\"3.5\" class=\"green-fill\"/\u003e\u003ccircle cx=\"380\" cy=\"88\" r=\"3.5\" class=\"green-fill\"/\u003e\n\u003ctext x=\"380\" y=\"118\" class=\"tiny\"\u003eused as a step\u003c/text\u003e\n\u003ctext x=\"500\" y=\"40\" text-anchor=\"end\" class=\"strong\"\u003ean aid, a furtherance\u003c/text\u003e\n\u003ctext x=\"132\" y=\"118\" text-anchor=\"middle\" class=\"tiny\"\u003edisposition adapts\u003c/text\u003e","quote":{"kind":"quote","text":"the mind converts and changes every hindrance to its activity into an aid; and so that which is a hindrance is made a furtherance to an act; and that which is an obstacle on the road helps us on this road.","original":""},"source":{"locator":"Book V, 20 (tr. Long)","url":"https://www.gutenberg.org/ebooks/15877"}},{"number":4,"topic":"Judgment","title":["Changing your mind when corrected","is still an act of your own"],"summary":"Following the person who corrects you is “as consistent with freedom” as persisting in error, because the change is made by your own movement, judgment and understanding. Book IV, 12 adds a filter: change “only from a certain persuasion, as of what is just or of common advantage … not because it appears pleasant or brings reputation.”","diagram_alt":"An old opinion becomes a revised opinion. Above a gray dashed filter line, “just, common good” passes down to the revision while “pleasant, reputation” is stopped. A dotted green line returns to you: still your own judgment.","diagram_svg":"\u003cline x1=\"250\" y1=\"98\" x2=\"540\" y2=\"98\" class=\"grey-stroke dash\" stroke-width=\"1.4\"/\u003e\n\u003ctext x=\"540\" y=\"114\" text-anchor=\"end\" class=\"tiny\"\u003efilter (IV.12)\u003c/text\u003e\n\u003crect x=\"252\" y=\"30\" width=\"154\" height=\"34\" rx=\"17\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/\u003e\n\u003ctext x=\"329\" y=\"51\" text-anchor=\"middle\" class=\"strong\"\u003ejust · common good\u003c/text\u003e\n\u003crect x=\"414\" y=\"30\" width=\"136\" height=\"34\" rx=\"17\" class=\"grey-shape\" opacity=\".3\"/\u003e\n\u003ctext x=\"482\" y=\"51\" text-anchor=\"middle\" class=\"sm\"\u003epleasant · reputation\u003c/text\u003e\n\u003cline x1=\"329\" y1=\"66\" x2=\"329\" y2=\"136\" class=\"green-stroke\" stroke-width=\"2\"/\u003e\n\u003cpolygon points=\"329.0,145.0 324.7,138.0 333.3,138.0\" class=\"green-fill\"/\u003e\n\u003cline x1=\"482\" y1=\"66\" x2=\"482\" y2=\"88\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/\u003e\n\u003cline x1=\"472\" y1=\"92\" x2=\"492\" y2=\"92\" class=\"grey-stroke-strong\" stroke-width=\"2.4\"/\u003e\n\u003ccircle cx=\"46\" cy=\"166\" r=\"19\" class=\"you\"/\u003e\n\u003ctext x=\"46\" y=\"170.5\" text-anchor=\"middle\" class=\"you-tx\"\u003eyou\u003c/text\u003e\n\u003crect x=\"84\" y=\"148\" width=\"116\" height=\"36\" rx=\"9\" class=\"grey-stroke-strong\" stroke-width=\"1.4\" fill=\"none\"/\u003e\n\u003ctext x=\"142\" y=\"171\" text-anchor=\"middle\" class=\"mid\"\u003eold opinion\u003c/text\u003e\n\u003cline x1=\"204\" y1=\"166\" x2=\"252\" y2=\"166\" class=\"green-stroke\" stroke-width=\"2\"/\u003e\n\u003cpolygon points=\"260.0,166.0 253.0,170.3 253.0,161.7\" class=\"green-fill\"/\u003e\n\u003crect x=\"264\" y=\"148\" width=\"130\" height=\"36\" rx=\"9\" class=\"green-stroke\" stroke-width=\"1.6\" fill=\"none\"/\u003e\n\u003ctext x=\"329\" y=\"171\" text-anchor=\"middle\" class=\"strong\"\u003erevised opinion\u003c/text\u003e\n\u003cpath d=\"M 329 186 C 322 206 90 206 56 186\" class=\"green-stroke dash\" stroke-width=\"1.6\" fill=\"none\"/\u003e\n\u003cpolygon points=\"52.0,182.0 60.1,183.4 54.4,189.9\" class=\"green-fill\"/\u003e\n\u003ctext x=\"190\" y=\"222\" text-anchor=\"middle\" class=\"tiny\"\u003estill your own judgment\u003c/text\u003e\n\u003ctext x=\"238\" y=\"44\" text-anchor=\"end\" class=\"tiny\"\u003esomeone\u003c/text\u003e\n\u003ctext x=\"238\" y=\"58\" text-anchor=\"end\" class=\"tiny\"\u003esets you right:\u003c/text\u003e","quote":{"kind":"quote","text":"Remember that to change thy opinion and to follow him who corrects thy error is as consistent with freedom as it is to persist in thy error.","original":""},"source":{"locator":"Book VIII, 16 (tr. Long)","url":"https://www.gutenberg.org/ebooks/15877"},"interpretation_note":"The filter comes from Book IV, 12; putting the two sections together is the editor’s choice."}]};
+const book = data.book, notes = data.cards, themeIntros = data.topics;
+const LANG = book.lang === 'en' ? 'en' : 'zh';
+const KIND = book.kind || 'book';
+const I18N = {
+  zh: {
+    all:'全部', statCards:'思想卡片', statTopics:'主题分组', print:'打印 / 存为 PDF ↗',
+    toOutline:'切换至文字提要', toCards:'切换至视觉卡片', outlineSuffix:' · 文本提要',
+    done:'已制卡 ✓', todo:'待制卡', goCard:'跳转卡片', check:'核对原文 ↗', note:'编辑注：',
+    save:'存图', saving:'生成中…', saveFail:'图片生成失败，已改为下载 SVG。',
+    sourceLabel:'资料来源：', viewSource:'查看来源 ↗', sourceTail:'。统一颜色和图形仅承载语义，不用于装饰。',
+    defaultNote:'卡片标题、机制图和文字提要是阅读者的归纳，不能替代原著；标为意译或编辑提炼的内容不属于逐字原文。',
+    sub:{book:'读书笔记', paper:'论文笔记', article:'阅读笔记'}, titleSuffix:{book:'视觉读书笔记', paper:'视觉论文笔记', article:'视觉阅读笔记'},
+    kinds:{quote:'原文节选', quote_translation:'原文节选 / 中文意译', paraphrase:'意译', editorial:'编辑提炼'},
+    you:'你', keyGrey:'灰色：可替代 / 行不通', keyUnique:'不规则形：独有能力', keyExplore:'虚线：摸索过程',
+    keyYou:'黑圈：你', keyWash:'浅绿框：根本前提', keyDivider:'灰虚线：分隔 / 门槛',
+    aria:{stats:'笔记统计', legend:'统一图例', toolbar:'主题筛选与视图', cards:'视觉笔记卡片', outline:'分主题的文字提要', check:n=>`核对第 ${n} 张卡片的来源`, save:n=>`把第 ${n} 张卡片保存为 PNG 图片`},
+    book:t=>`《${t}》`, lq:'“', rq:'”'
+  },
+  en: {
+    all:'All', statCards:'Cards', statTopics:'Topics', print:'Print / Save PDF ↗',
+    toOutline:'Outline view', toCards:'Card view', outlineSuffix:' · Outline',
+    done:'Carded ✓', todo:'Not yet carded', goCard:'Go to card', check:'Check source ↗', note:'Note: ',
+    save:'Save PNG', saving:'Rendering…', saveFail:'PNG export failed; downloading SVG instead.',
+    sourceLabel:'Source: ', viewSource:'view ↗', sourceTail:'. Colors and shapes carry fixed meanings; they are not decoration.',
+    defaultNote:'Card titles, diagrams and outlines are the reader’s own synthesis and do not replace the source. Items marked Paraphrase or Editorial are not verbatim.',
+    sub:{book:'Reading Notes', paper:'Paper Notes', article:'Reading Notes'}, titleSuffix:{book:'Visual Reading Notes', paper:'Visual Paper Notes', article:'Visual Reading Notes'},
+    kinds:{quote:'Quote', quote_translation:'Quote / Translation', paraphrase:'Paraphrase', editorial:'Editorial'},
+    you:'you', keyGrey:'Gray: replaceable / dead end', keyUnique:'Blob: unique ability', keyExplore:'Dotted green: exploration',
+    keyYou:'Dark circle: you', keyWash:'Tinted box: foundation', keyDivider:'Gray dashes: divider / threshold',
+    aria:{stats:'Deck stats', legend:'Visual key', toolbar:'Filter and view', cards:'Visual note cards', outline:'Outline by topic', check:n=>`Check the source of card ${n}`, save:n=>`Save card ${n} as a PNG image`},
+    book:t=>t, lq:'“', rq:'”'
+  }
+};
+const T = I18N[LANG];
+const E = s => String(s ?? '').replace(/[&<>"']/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const pad = x => String(x).padStart(2, '0');
+const $ = id => document.getElementById(id);
+const outlineEntries = data.outline_entries || notes.map(n=>({number:n.number,topic:n.topic,title:n.title.join(LANG==='en'?' ':''),summary:n.summary,source:n.source}));
+const cardById = new Map(notes.map(n=>[n.number,n]));
+
+document.documentElement.lang = LANG === 'en' ? 'en' : 'zh-CN';
+document.title = `${book.title} · ${T.titleSuffix[KIND]}`;
+document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = T[el.dataset.i18n]; });
+$('legend-you').textContent = T.you;
+$('cover-stats').setAttribute('aria-label', T.aria.stats);
+$('legend').setAttribute('aria-label', T.aria.legend);
+$('toolbar').setAttribute('aria-label', T.aria.toolbar);
+$('cards').setAttribute('aria-label', T.aria.cards);
+$('outline').setAttribute('aria-label', T.aria.outline);
+
+$('volume-label').textContent = `READING SYSTEM · VOL. ${pad(book.volume || 1)}`;
+$('page-title').innerHTML = `${E(book.title)}<span class="h1-slash">/</span> <span class="h1-sub">${E(T.sub[KIND])}</span>`;
+$('page-subtitle').textContent = book.subtitle + ' · Visual Reading Notes';
+$('page-intro').textContent = book.intro;
+$('stat-cards').textContent = pad(notes.length);
+$('stat-topics').textContent = pad(Object.keys(themeIntros).length);
+$('editorial-note').textContent = book.editorial_note || T.defaultNote;
+$('source-note').innerHTML = `${E(T.sourceLabel)}${E(book.source_name)}${book.source_url ? ` (<a target="_blank" rel="noopener noreferrer" href="${E(book.source_url)}">${E(T.viewSource)}</a>)` : ''}${E(T.sourceTail)}`;
+$('filters').innerHTML = [T.all, ...Object.keys(themeIntros)].map((tag, i)=>`<button type="button" class="filter" data-filter="${i===0 ? '*' : E(tag)}" aria-pressed="${i===0}">${E(tag)}</button>`).join('');
+
+// Show only the legend entries this deck actually uses.
+const allSvg = notes.map(n => n.diagram_svg).join('\n');
+const hasClass = (...names) => [...allSvg.matchAll(/class="([^"]*)"/g)].some(m => names.every(nm => m[1].split(/\s+/).includes(nm)));
+const usage = {
+  grey: hasClass('grey-shape'),
+  unique: /href="#ng-unique"/.test(allSvg),
+  explore: hasClass('green-stroke', 'dash'),
+  you: hasClass('you'),
+  wash: hasClass('wash-fill'),
+  divider: hasClass('grey-stroke', 'dash')
+};
+let legendCount = 0;
+document.querySelectorAll('.legend-item').forEach(el => { el.hidden = !usage[el.dataset.needs]; if (!el.hidden) legendCount++; });
+$('legend').hidden = legendCount === 0;
+
+const quoteParts = q => {
+  const verbatimMain = q.kind === 'quote';
+  const verbatimOrig = q.kind === 'quote' || q.kind === 'quote_translation';
+  return {
+    label: T.kinds[q.kind],
+    main: verbatimMain ? T.lq + q.text + T.rq : q.text,
+    orig: q.original ? (verbatimOrig ? '“' + q.original + '”' : q.original) : ''
+  };
+};
+const makeQuote = n => {
+  const p = quoteParts(n.quote);
+  return `<div class="quote"><div class="quote-label">${E(p.label)}</div><p class="quote-main">${E(p.main)}</p>${p.orig ? `<p class="quote-orig">${E(p.orig)}</p>` : ''}</div>`;
+};
+const sourceLink = n => n.source.url ? `<a href="${E(n.source.url)}" target="_blank" rel="noopener noreferrer" aria-label="${E(T.aria.check(n.number))}">${E(T.check)}</a>` : '';
+$('cards').innerHTML = notes.map(n=>`<article class="note-card" data-tag="${E(n.topic)}" id="note-${pad(n.number)}">
+  <div class="card-top"><span class="card-number">#${pad(n.number)}</span><span class="card-book">${E(T.book(book.title))}</span><span class="card-tag">${E(n.topic)}</span></div>
+  <h2 class="card-title"><span>${E(n.title[0])}</span><span>${E(n.title[1])}</span></h2>
+  <div class="diagram-box"><svg class="diagram" viewBox="0 0 560 228" role="img" aria-label="${E(n.diagram_alt)}">${n.diagram_svg}</svg></div>
+  ${makeQuote(n)}
+  ${n.interpretation_note ? `<p class="card-note">${E(T.note)}${E(n.interpretation_note)}</p>` : ''}
+  <div class="source"><span class="source-chapter" title="${E(n.source.locator)}">SOURCE · ${E(n.source.locator)}</span><span class="source-actions">${sourceLink(n)}<button type="button" class="save-btn" data-save="${n.number}" aria-label="${E(T.aria.save(n.number))}">${E(T.save)}</button></span></div>
+</article>`).join('');
+$('outline').innerHTML = Object.keys(themeIntros).map(tag=>`<section class="outline-group" data-tag="${E(tag)}"><h2 class="outline-group-title">${E(tag)}${E(T.outlineSuffix)}</h2><p class="outline-group-intro">${E(themeIntros[tag])}</p>${outlineEntries.filter(n=>n.topic===tag).map(n=>{
+  const saved = cardById.has(n.number);
+  const source = n.source || {};
+  const title = Array.isArray(n.title) ? n.title.join(LANG==='en'?' ':'') : n.title;
+  return `<article class="outline-row"><div class="outline-num">#${pad(n.number)}</div><div><h3 class="outline-title">${E(title)}</h3><p class="outline-sum">${E(n.summary)}</p><div class="outline-ref"><b>${E(saved ? T.done : T.todo)}</b> ${E(source.locator || '')} ${source.url ? `· <a href="${E(source.url)}" target="_blank" rel="noopener noreferrer">${E(T.check)}</a>` : ''} ${saved ? `· <a href="#note-${pad(n.number)}" class="go-card" data-id="${n.number}">${E(T.goCard)}</a>` : ''}</div></div></article>`;
+}).join('')}</section>`).join('');
+
+let currentFilter = '*', isOutline = false;
+function render() {
+  const visible = currentFilter === '*' ? notes.length : notes.filter(n=>n.topic===currentFilter).length;
+  $('card-count').textContent = `${pad(visible)} / ${pad(notes.length)}`;
+  document.querySelectorAll('.filter').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.filter===currentFilter)));
+  document.querySelectorAll('.note-card,.outline-group').forEach(el=>el.hidden = currentFilter!=='*' && el.dataset.tag!==currentFilter);
+  $('cards').hidden = isOutline;
+  $('outline').hidden = !isOutline;
+  $('view-switch').textContent = isOutline ? T.toCards : T.toOutline;
+  $('view-switch').setAttribute('aria-pressed', String(isOutline));
+}
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;currentFilter=b.dataset.filter;render();});
+$('view-switch').addEventListener('click',()=>{isOutline=!isOutline;render();});
+$('print-btn').addEventListener('click',()=>window.print());
+$('outline').addEventListener('click',e=>{
+  const b=e.target.closest('.go-card');if(!b)return;
+  e.preventDefault();
+  currentFilter='*';isOutline=false;render();
+  $('note-'+pad(b.dataset.id)).scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+/* ---------- Single-card image export (offline, no dependencies) ----------
+   Each card is redrawn as one standalone SVG (plain <text>, no foreignObject),
+   then rasterised to a 2x PNG. Colours follow the theme currently on screen. */
+const FONT = {
+  serif: LANG === 'en'
+    ? "'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,'Noto Serif','Liberation Serif',serif"
+    : "'Songti SC','STSong','Noto Serif CJK SC','Noto Serif SC',Georgia,serif",
+  sans: "-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Noto Sans CJK SC','Noto Sans SC','Microsoft YaHei',sans-serif",
+  mono: "ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace",
+  italic: "Georgia,'Liberation Serif',serif"
+};
+const X = s => String(s ?? '').replace(/[&<>"]/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+const measureCtx = document.createElement('canvas').getContext('2d');
+const measure = (text, font) => { measureCtx.font = font; return measureCtx.measureText(text).width; };
+const NO_LINE_START = /^[，。、；：！？）》」』”’,.;:!?)\]]/;
+function wrapText(text, font, maxW) {
+  const tokens = String(text).match(/[^\s\u2e80-\u9fff\uf900-\ufaff\uff00-\uffef]+\s*|\s+|[\s\S]/gu) || [];
+  const lines = []; let line = '';
+  for (const tok of tokens) {
+    if (!line || measure(line + tok, font) <= maxW || NO_LINE_START.test(tok)) { line += tok; continue; }
+    lines.push(line.trimEnd()); line = tok.trimStart();
+  }
+  if (line.trim()) lines.push(line.trimEnd());
+  return lines;
+}
+function fitOneLine(text, font, maxW) {
+  if (measure(text, font) <= maxW) return text;
+  let s = text;
+  while (s.length > 1 && measure(s + '…', font) > maxW) s = s.slice(0, -1);
+  return s + '…';
+}
+function cardSVG(n) {
+  const cs = getComputedStyle(document.documentElement);
+  const c = k => cs.getPropertyValue(k).trim();
+  const W = 600, M = 24, P = 32, L = M + P, R = W - M - P, CW = R - L;
+  const out = [];
+  const txt = (x, y, s, font, fill, extra='') => out.push(`<text x="${x}" y="${y}" fill="${fill}" style="font:${X(font)}" ${extra}>${X(s)}</text>`);
+  let y = L + 13;
+  // top row: number · book · tag
+  const fNum = `600 13px ${FONT.mono}`, fBook = `${LANG==='en'?'italic ':''}400 12px ${FONT.sans}`, fTag = `400 11px ${FONT.sans}`;
+  const numText = '#' + pad(n.number);
+  txt(L, y, numText, fNum, c('--green'));
+  const tagW = measure(n.topic, fTag) + n.topic.length * 1.1 + 16;
+  out.push(`<rect x="${R - tagW}" y="${y - 14}" width="${tagW}" height="21" rx="4" fill="none" stroke="${c('--border')}"/>`);
+  txt(R - tagW / 2, y + 1, n.topic, fTag, c('--ink-soft'), 'text-anchor="middle" letter-spacing="1.1"');
+  const bookX = L + measure(numText, fNum) + 11;
+  txt(bookX, y, fitOneLine(T.book(book.title), fBook, R - tagW - 12 - bookX), fBook, c('--gray-text'));
+  // title
+  const tSize = 26, tLead = Math.round(tSize * 1.42);
+  const fTitle = `${LANG==='en'?700:800} ${tSize}px ${FONT.serif}`;
+  y += 22;
+  for (const part of n.title) for (const ln of wrapText(part, fTitle, CW)) { y += tLead; txt(L, y - 9, ln, fTitle, c('--ink'), LANG==='en' ? '' : 'letter-spacing="-0.9"'); }
+  // diagram between two hairlines
+  y += 18;
+  out.push(`<line x1="${L}" y1="${y}" x2="${R}" y2="${y}" stroke="${c('--border')}"/>`);
+  const dH = CW * 228 / 560;
+  out.push(`<svg x="${L}" y="${y + 12}" width="${CW}" height="${dH}" viewBox="0 0 560 228" overflow="visible"><g class="dg">${n.diagram_svg}</g></svg>`);
+  y += dH + 24;
+  out.push(`<line x1="${L}" y1="${y}" x2="${R}" y2="${y}" stroke="${c('--border')}"/>`);
+  // quote
+  const p = quoteParts(n.quote);
+  const fLabel = `700 11px ${FONT.sans}`;
+  y += 30;
+  txt(L, y, p.label, fLabel, c('--green'), 'letter-spacing="1.6"');
+  const labelEnd = L + measure(p.label, fLabel) + p.label.length * 1.6 + 12;
+  out.push(`<line x1="${labelEnd}" y1="${y - 4}" x2="${R}" y2="${y - 4}" stroke="${c('--border')}"/>`);
+  const fMain = `${LANG==='en'?500:600} 17px ${FONT.serif}`;
+  y += 6;
+  for (const ln of wrapText(p.main, fMain, CW)) { y += 27; txt(L, y, ln, fMain, c('--ink')); }
+  if (p.orig) {
+    const fOrig = `italic 400 13px ${FONT.italic}`;
+    y += 4;
+    for (const ln of wrapText(p.orig, fOrig, CW)) { y += 20; txt(L, y, ln, fOrig, c('--gray-text')); }
+  }
+  if (n.interpretation_note) {
+    const fNote = `400 12px ${FONT.sans}`;
+    y += 6;
+    for (const ln of wrapText(T.note + n.interpretation_note, fNote, CW)) { y += 19; txt(L, y, ln, fNote, c('--gray-text')); }
+  }
+  // source line
+  const fSrc = `400 11px ${FONT.sans}`;
+  y += 34;
+  txt(L, y, fitOneLine('SOURCE · ' + n.source.locator, fSrc, CW), fSrc, c('--gray-text'));
+  const H = Math.ceil(y + P - 6 + M);
+  const style = `.dg text{font-family:${FONT.sans};letter-spacing:.02em}
+.dg .tx{fill:${c('--ink-soft')};font-size:14px}.dg .sm{fill:${c('--gray-text')};font-size:12px}
+.dg .mid{fill:${c('--ink')};font-size:14px;font-weight:600}.dg .strong{fill:${c('--green')};font-size:14px;font-weight:650}
+.dg .tiny{fill:${c('--gray-text')};font-size:11px}.dg .grey-shape{fill:${c('--gray-shape')}}
+.dg .grey-stroke{stroke:${c('--gray-line')}}.dg .grey-stroke-strong{stroke:${c('--gray-shape')}}
+.dg .green-fill{fill:${c('--green')}}.dg .green-stroke{stroke:${c('--green-2')}}.dg .wash-fill{fill:${c('--wash')}}
+.dg .dash{stroke-dasharray:5 7}.dg .you{fill:${c('--ink')}}.dg .you-tx{fill:${c('--card')};font-weight:700;font-size:12px}
+.dg use{fill:${c('--green')}}.dg path,.dg line{stroke-linecap:round;stroke-linejoin:round}`;
+  const unique = document.getElementById('ng-unique').getAttribute('d');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+<defs><style>${style}</style><path id="ng-unique" d="${unique}"/></defs>
+<rect width="${W}" height="${H}" fill="${c('--bg')}"/>
+<rect x="${M + .5}" y="${M + .5}" width="${W - 2 * M - 1}" height="${H - 2 * M - 1}" rx="18" fill="${c('--card')}" stroke="${c('--border')}"/>
+${out.join('\n')}
+</svg>`;
+  return { svg, W, H };
+}
+function fileStem(n) { return `${String(book.title).replace(/[\\/:*?"<>|\s]+/g, '-')}-${pad(n.number)}`; }
+function download(blob, name) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+async function cardPNG(n, scale = 2) {
+  const { svg, W, H } = cardSVG(n);
+  const img = new Image();
+  await new Promise((ok, fail) => { img.onload = ok; img.onerror = fail; img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg); });
+  const canvas = document.createElement('canvas');
+  canvas.width = W * scale; canvas.height = H * scale;
+  canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+  return await new Promise((ok, fail) => canvas.toBlob(b => b ? ok(b) : fail(new Error('toBlob')), 'image/png'));
+}
+$('cards').addEventListener('click', async e => {
+  const btn = e.target.closest('[data-save]'); if (!btn) return;
+  const n = cardById.get(Number(btn.dataset.save));
+  btn.disabled = true; btn.textContent = T.saving;
+  try { download(await cardPNG(n), fileStem(n) + '.png'); }
+  catch (err) { console.warn(err); alert(T.saveFail); download(new Blob([cardSVG(n).svg], { type: 'image/svg+xml' }), fileStem(n) + '.svg'); }
+  finally { btn.disabled = false; btn.textContent = T.save; }
+});
+window.NoteGlyph = { cardSVG, cardPNG };
+render();
+</script>
+</body>
+</html>

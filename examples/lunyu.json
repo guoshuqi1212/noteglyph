@@ -1,0 +1,203 @@
+{
+  "book": {
+    "lang": "zh",
+    "kind": "book",
+    "title": "论语",
+    "subtitle": "The Analects · 孔子及其弟子语录",
+    "volume": 1,
+    "intro": "从《论语》中选出八条谈学习、施教与做事的话：五条画成机制卡，三条暂留在文字提要里。引文为原文节选，标题与图示是编者的归纳。",
+    "source_name": "《论语》通行本（原文核对自开源数据集 chinese-poetry，章节按通行分章）",
+    "source_url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E",
+    "editorial_note": "卡片标题、摘要和机制图是编者对原文的理解，不是孔子原话。字词释义参照通行注释；注家有分歧或借用注释的地方，在摘要或编辑注里写明。"
+  },
+  "topics": {
+    "学习": "学与思怎样配合，如何从身边的人和旧知识里不断得到新东西。",
+    "施教": "点拨在什么时候才有效，什么时候应当停下。",
+    "行事": "做事先抓根本、不被急躁和小利带偏。"
+  },
+  "outline_entries": [
+    {
+      "number": 1,
+      "topic": "学习",
+      "title": "只学不思与只思不学，是两种不同的失败",
+      "summary": "学而不思则罔，思而不学则殆。两种偏废各有后果，二者要互相推动。",
+      "source": {
+        "locator": "《论语·为政》第十五章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E7%82%BA%E6%94%BF%E7%AC%AC%E4%BA%8C"
+      }
+    },
+    {
+      "number": 2,
+      "topic": "学习",
+      "title": "别人的长处和短处，都能拿来修正自己",
+      "summary": "三人行，必有我师焉。见善则从，见不善则改，两条路都回到自身。",
+      "source": {
+        "locator": "《论语·述而》第二十二章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%BF%B0%E8%80%8C%E7%AC%AC%E4%B8%83"
+      }
+    },
+    {
+      "number": 3,
+      "topic": "学习",
+      "title": "能从旧知里引出新理解，才可以为人师",
+      "summary": "温故而知新，可以为师矣。待制卡：适合画成“积累”路径，但要避免暗示精确的增长曲线；“故”“新”的具体所指，注家说法不一。",
+      "source": {
+        "locator": "《论语·为政》第十一章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E7%82%BA%E6%94%BF%E7%AC%AC%E4%BA%8C"
+      }
+    },
+    {
+      "number": 4,
+      "topic": "学习",
+      "title": "知道、喜好、以之为乐，是投入程度递进的三层",
+      "summary": "知之者不如好之者，好之者不如乐之者。待制卡：可画成三级台阶，但原文只比较层次，没有说明如何从一层到下一层。",
+      "source": {
+        "locator": "《论语·雍也》第二十章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E9%9B%8D%E4%B9%9F%E7%AC%AC%E5%85%AD"
+      }
+    },
+    {
+      "number": 5,
+      "topic": "施教",
+      "title": "学生先卡住、想求通，点拨才接得住",
+      "summary": "不愤不启，不悱不发；举一隅不以三隅反，则不复也。教的时机由学生的状态决定。",
+      "source": {
+        "locator": "《论语·述而》第八章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%BF%B0%E8%80%8C%E7%AC%AC%E4%B8%83"
+      }
+    },
+    {
+      "number": 6,
+      "topic": "行事",
+      "title": "急于求快、贪图小利，反而做不成大事",
+      "summary": "孔子答子夏问政：欲速则不达，见小利则大事不成。",
+      "source": {
+        "locator": "《论语·子路》第十七章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E5%AD%90%E8%B7%AF%E7%AC%AC%E5%8D%81%E4%B8%89"
+      }
+    },
+    {
+      "number": 7,
+      "topic": "行事",
+      "title": "修养仁德的“利器”，是身边的贤者与仁者",
+      "summary": "工欲善其事，必先利其器；下文点明“器”是可以侍奉的贤大夫和可以结交的仁士。",
+      "source": {
+        "locator": "《论语·卫灵公》第十章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%A1%9B%E9%9D%88%E5%85%AC%E7%AC%AC%E5%8D%81%E4%BA%94"
+      }
+    },
+    {
+      "number": 8,
+      "topic": "行事",
+      "title": "有错不改，才是真正的错",
+      "summary": "过而不改，是谓过矣。待制卡：适合与“反馈回路”图配合，强调改的动作，而不是犯错本身。",
+      "source": {
+        "locator": "《论语·卫灵公》第三十章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%A1%9B%E9%9D%88%E5%85%AC%E7%AC%AC%E5%8D%81%E4%BA%94"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "number": 1,
+      "topic": "学习",
+      "title": [
+        "只学不思与只思不学，",
+        "是两种不同的失败"
+      ],
+      "summary": "孔子把“学”（向外获取：读书、请教、见闻）和“思”（向内推究、贯通）分开讲，并分别点出两种偏废：只学不思则“罔”，多解为迷惘而无所得；只思不学则“殆”，注家或解为疑惑不定，或解为危险不安。原文没有讲二者的比例，只讲缺一不可。",
+      "diagram_alt": "左侧两条灰色死路：堆积见闻走向“罔”，原地空转的思走向“殆”；右侧学与思用两条绿色弧线互相推动，中间是“有得”。",
+      "diagram_svg": "<text x=\"150\" y=\"24\" text-anchor=\"middle\" class=\"sm\">偏于一端</text>\n<text x=\"430\" y=\"24\" text-anchor=\"middle\" class=\"strong\">学思相济</text>\n<line x1=\"300\" y1=\"14\" x2=\"300\" y2=\"214\" class=\"grey-stroke dash\" stroke-width=\"1.2\"/>\n<text x=\"26\" y=\"70\" class=\"mid\">只学不思</text>\n<circle cx=\"42\" cy=\"100\" r=\"9\" class=\"grey-shape\"/><circle cx=\"66\" cy=\"100\" r=\"9\" class=\"grey-shape\"/><circle cx=\"90\" cy=\"100\" r=\"9\" class=\"grey-shape\"/><circle cx=\"114\" cy=\"100\" r=\"9\" class=\"grey-shape\"/>\n<text x=\"78\" y=\"126\" text-anchor=\"middle\" class=\"tiny\">见闻越堆越多</text>\n<line x1=\"134\" y1=\"100\" x2=\"196\" y2=\"100\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/>\n<polygon points=\"204.0,100.0 197.0,104.3 197.0,95.7\" class=\"grey-shape\"/>\n<text x=\"240\" y=\"98\" text-anchor=\"middle\" class=\"mid\">罔</text>\n<text x=\"240\" y=\"116\" text-anchor=\"middle\" class=\"tiny\">迷惘无得</text>\n<text x=\"26\" y=\"160\" class=\"mid\">只思不学</text>\n<path d=\"M 78 172 A 16 16 0 1 1 62 188\" class=\"grey-stroke-strong\" stroke-width=\"1.6\" fill=\"none\"/>\n<polygon points=\"62.0,181.0 65.7,187.0 58.3,187.0\" class=\"grey-shape\"/>\n<text x=\"78\" y=\"192\" text-anchor=\"middle\" class=\"tiny\">思</text>\n<text x=\"78\" y=\"218\" text-anchor=\"middle\" class=\"tiny\">原地空转</text>\n<line x1=\"134\" y1=\"188\" x2=\"196\" y2=\"188\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/>\n<polygon points=\"204.0,188.0 197.0,192.3 197.0,183.7\" class=\"grey-shape\"/>\n<text x=\"240\" y=\"186\" text-anchor=\"middle\" class=\"mid\">殆</text>\n<text x=\"240\" y=\"204\" text-anchor=\"middle\" class=\"tiny\">疑殆不安</text>\n<rect x=\"330\" y=\"96\" width=\"62\" height=\"40\" rx=\"10\" class=\"green-stroke\" stroke-width=\"1.6\" fill=\"none\"/>\n<text x=\"361\" y=\"121\" text-anchor=\"middle\" class=\"mid\">学</text>\n<rect x=\"468\" y=\"96\" width=\"62\" height=\"40\" rx=\"10\" class=\"green-stroke\" stroke-width=\"1.6\" fill=\"none\"/>\n<text x=\"499\" y=\"121\" text-anchor=\"middle\" class=\"mid\">思</text>\n<path d=\"M 372 90 C 392 52 456 52 484 86\" class=\"green-stroke\" stroke-width=\"2\" fill=\"none\"/>\n<polygon points=\"487.0,91.0 479.6,87.5 486.8,82.8\" class=\"green-fill\"/>\n<text x=\"430\" y=\"54\" text-anchor=\"middle\" class=\"tiny\">所学供思</text>\n<path d=\"M 488 142 C 468 180 404 180 376 146\" class=\"green-stroke\" stroke-width=\"2\" fill=\"none\"/>\n<polygon points=\"373.0,141.0 380.4,144.5 373.2,149.2\" class=\"green-fill\"/>\n<text x=\"430\" y=\"190\" text-anchor=\"middle\" class=\"tiny\">所思引学</text>\n<text x=\"430\" y=\"121\" text-anchor=\"middle\" class=\"strong\">有得</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "学而不思则罔，思而不学则殆。",
+        "original": ""
+      },
+      "source": {
+        "locator": "《论语·为政》第十五章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E7%82%BA%E6%94%BF%E7%AC%AC%E4%BA%8C"
+      }
+    },
+    {
+      "number": 2,
+      "topic": "学习",
+      "title": [
+        "别人的长处和短处，",
+        "都能拿来修正自己"
+      ],
+      "summary": "几个人同行，其中必有可以做我老师的人：看到长处就跟着学，看到短处就反省并改掉自己身上同样的毛病。关键在后半句——“不善者”也是老师，因为它给了自我检查的参照。原文讲的是向身边人学习的态度，不是说任何人都值得全盘效仿。",
+      "diagram_alt": "“你”与两位同行者；一条绿线经“见其善”到“从之”，另一条经“见其不善”到“改之”，两条汇合为“皆为我师”，再用绿色虚线回到“你”。",
+      "diagram_svg": "<text x=\"88\" y=\"24\" text-anchor=\"middle\" class=\"sm\">三人行</text>\n<circle cx=\"104\" cy=\"66\" r=\"16\" class=\"grey-stroke-strong\" stroke-width=\"1.6\" fill=\"none\"/>\n<circle cx=\"104\" cy=\"164\" r=\"16\" class=\"grey-stroke-strong\" stroke-width=\"1.6\" fill=\"none\"/>\n<circle cx=\"54\" cy=\"115\" r=\"20\" class=\"you\"/>\n<text x=\"54\" y=\"119.5\" text-anchor=\"middle\" class=\"you-tx\">你</text>\n<line x1=\"122\" y1=\"66\" x2=\"246\" y2=\"66\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"254.0,66.0 247.0,70.3 247.0,61.7\" class=\"green-fill\"/>\n<text x=\"186\" y=\"56\" text-anchor=\"middle\" class=\"tiny\">见其善</text>\n<rect x=\"258\" y=\"46\" width=\"118\" height=\"40\" rx=\"9\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"317\" y=\"71\" text-anchor=\"middle\" class=\"mid\">从之 · 学其长</text>\n<line x1=\"122\" y1=\"164\" x2=\"246\" y2=\"164\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"254.0,164.0 247.0,168.3 247.0,159.7\" class=\"green-fill\"/>\n<text x=\"186\" y=\"154\" text-anchor=\"middle\" class=\"tiny\">见其不善</text>\n<rect x=\"258\" y=\"144\" width=\"118\" height=\"40\" rx=\"9\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"317\" y=\"169\" text-anchor=\"middle\" class=\"mid\">改之 · 省己过</text>\n<path d=\"M 378 66 C 420 66 420 115 452 115\" class=\"green-stroke\" stroke-width=\"2\" fill=\"none\"/>\n<path d=\"M 378 164 C 420 164 420 115 452 115\" class=\"green-stroke\" stroke-width=\"2\" fill=\"none\"/>\n<polygon points=\"460.0,115.0 453.0,119.3 453.0,110.7\" class=\"green-fill\"/>\n<text x=\"508\" y=\"111\" text-anchor=\"middle\" class=\"strong\">皆为</text>\n<text x=\"508\" y=\"130\" text-anchor=\"middle\" class=\"strong\">我师</text>\n<path d=\"M 508 146 C 504 222 34 226 44 146\" class=\"green-stroke dash\" stroke-width=\"1.6\" fill=\"none\"/>\n<polygon points=\"45.0,138.0 49.0,145.2 40.3,144.8\" class=\"green-fill\"/>\n<text x=\"276\" y=\"224\" text-anchor=\"middle\" class=\"tiny\">两条路都回到自身的修正</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "三人行，必有我师焉。择其善者而从之，其不善者而改之。",
+        "original": ""
+      },
+      "source": {
+        "locator": "《论语·述而》第二十二章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%BF%B0%E8%80%8C%E7%AC%AC%E4%B8%83"
+      }
+    },
+    {
+      "number": 5,
+      "topic": "施教",
+      "title": [
+        "学生先卡住、想求通，",
+        "点拨才接得住"
+      ],
+      "summary": "孔子讲自己的教法：学生不到苦思求通而不得的时候不去开导，不到想说却说不出的时候不去启发；举出一个方面，学生不能由此推知其余三个方面，就不再往下教。这里有两道门槛：先有求通的状态，点拨才有落点；点拨之后能举一反三，才继续推进。",
+      "diagram_alt": "一条灰色横虚线是“愤/悱”的门槛。左边过早的灰色粗箭头停在门槛上；中间“你”沿绿色虚线苦思到达门槛，与向下的绿色“启·发”相接；右边方形一角已给出，其余三角待推出。",
+      "diagram_svg": "<line x1=\"20\" y1=\"104\" x2=\"388\" y2=\"104\" class=\"grey-stroke dash\" stroke-width=\"1.4\"/>\n<text x=\"24\" y=\"96\" class=\"tiny\">门槛：愤 / 悱</text>\n<text x=\"110\" y=\"24\" text-anchor=\"middle\" class=\"sm\">过早点拨</text>\n<line x1=\"110\" y1=\"34\" x2=\"110\" y2=\"88\" class=\"grey-stroke-strong\" stroke-width=\"3\"/>\n<polygon points=\"110.0,97.0 104.4,88.0 115.6,88.0\" class=\"grey-shape\"/>\n<text x=\"110\" y=\"128\" text-anchor=\"middle\" class=\"tiny\">落不下去</text>\n<line x1=\"110\" y1=\"150\" x2=\"110\" y2=\"170\" class=\"grey-stroke-strong\" stroke-width=\"1.6\"/>\n<circle cx=\"110\" cy=\"192\" r=\"18\" class=\"you\"/>\n<text x=\"110\" y=\"196.5\" text-anchor=\"middle\" class=\"you-tx\">你</text>\n<text x=\"276\" y=\"24\" text-anchor=\"middle\" class=\"strong\">启 · 发</text>\n<line x1=\"276\" y1=\"34\" x2=\"276\" y2=\"90\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"276.0,99.0 271.7,92.0 280.3,92.0\" class=\"green-fill\"/>\n<circle cx=\"232\" cy=\"192\" r=\"18\" class=\"you\"/>\n<text x=\"232\" y=\"196.5\" text-anchor=\"middle\" class=\"you-tx\">你</text>\n<path d=\"M 248 180 C 296 172 236 150 270 140 C 300 132 262 118 276 108\" class=\"green-stroke dash\" stroke-width=\"2.2\" fill=\"none\"/>\n<circle cx=\"266\" cy=\"166\" r=\"3.5\" class=\"green-fill\"/><circle cx=\"272\" cy=\"140\" r=\"3.5\" class=\"green-fill\"/>\n<text x=\"306\" y=\"166\" class=\"tiny\">苦思求通</text>\n<line x1=\"406\" y1=\"14\" x2=\"406\" y2=\"214\" class=\"grey-stroke dash\" stroke-width=\"1.2\"/>\n<text x=\"484\" y=\"24\" text-anchor=\"middle\" class=\"sm\">举一隅</text>\n<rect x=\"452\" y=\"50\" width=\"64\" height=\"64\" class=\"green-stroke dash\" stroke-width=\"1.5\" fill=\"none\"/>\n<circle cx=\"452\" cy=\"50\" r=\"7\" class=\"green-fill\"/>\n<circle cx=\"516\" cy=\"50\" r=\"5\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<circle cx=\"452\" cy=\"114\" r=\"5\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<circle cx=\"516\" cy=\"114\" r=\"5\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"484\" y=\"148\" text-anchor=\"middle\" class=\"strong\">以三隅反</text>\n<text x=\"484\" y=\"168\" text-anchor=\"middle\" class=\"tiny\">→ 再往下教</text>\n<text x=\"484\" y=\"196\" text-anchor=\"middle\" class=\"sm\">不能反 → 不复</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "不愤不启，不悱不发，举一隅不以三隅反，则不复也。",
+        "original": ""
+      },
+      "source": {
+        "locator": "《论语·述而》第八章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%BF%B0%E8%80%8C%E7%AC%AC%E4%B8%83"
+      },
+      "interpretation_note": "“愤”“悱”的解释采用朱熹《论语集注》的通行说法（心里想通而未通、口里想说而说不出），属于注家的理解，不是《论语》原文。"
+    },
+    {
+      "number": 6,
+      "topic": "行事",
+      "title": [
+        "急于求快、贪图小利，",
+        "反而做不成大事"
+      ],
+      "summary": "子夏任莒父的地方长官时向孔子问政，孔子答：不要求快，不要贪小利；求快反而达不到目的，贪小利则大事办不成。原文的语境是为政；推广到个人做事时，要保留“心里有一件大事”这个前提。",
+      "diagram_alt": "“你”出发的三条路：灰色粗箭头因求快冲过头，标“不达”；另一条灰色粗箭头偏向几粒小利，标“大事不成”；一条较细的绿色直线稳步指向靶心“大事”。",
+      "diagram_svg": "<circle cx=\"470\" cy=\"114\" r=\"52\" class=\"green-stroke\" stroke-width=\"1.4\" fill=\"none\"/>\n<circle cx=\"470\" cy=\"114\" r=\"33\" class=\"green-stroke\" stroke-width=\"1.4\" fill=\"none\"/>\n<circle cx=\"470\" cy=\"114\" r=\"14\" class=\"green-stroke\" stroke-width=\"1.4\" fill=\"none\"/>\n<circle cx=\"470\" cy=\"114\" r=\"5\" class=\"green-fill\"/>\n<text x=\"470\" y=\"194\" text-anchor=\"middle\" class=\"strong\">大事</text>\n<circle cx=\"52\" cy=\"114\" r=\"20\" class=\"you\"/>\n<text x=\"52\" y=\"118.5\" text-anchor=\"middle\" class=\"you-tx\">你</text>\n<path d=\"M 74 104 C 170 64 250 34 330 26\" class=\"grey-stroke-strong\" stroke-width=\"7\" fill=\"none\"/>\n<polygon points=\"348.0,25.0 333.8,35.5 332.3,16.9\" class=\"grey-shape\"/>\n<text x=\"236\" y=\"70\" text-anchor=\"middle\" class=\"tiny\">欲速：抢步冒进</text>\n<text x=\"372\" y=\"30\" class=\"sm\">不达</text>\n<path d=\"M 74 126 C 150 160 200 190 248 194\" class=\"grey-stroke-strong\" stroke-width=\"7\" fill=\"none\"/>\n<polygon points=\"264.0,194.0 249.0,203.3 249.0,184.7\" class=\"grey-shape\"/>\n<circle cx=\"286\" cy=\"188\" r=\"5\" class=\"grey-shape\"/><circle cx=\"300\" cy=\"200\" r=\"5\" class=\"grey-shape\"/><circle cx=\"314\" cy=\"188\" r=\"5\" class=\"grey-shape\"/>\n<text x=\"166\" y=\"208\" text-anchor=\"middle\" class=\"tiny\">见小利：被眼前牵走</text>\n<text x=\"300\" y=\"222\" text-anchor=\"middle\" class=\"sm\">大事不成</text>\n<line x1=\"76\" y1=\"114\" x2=\"408\" y2=\"114\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"418.0,114.0 411.0,118.3 411.0,109.7\" class=\"green-fill\"/>\n<circle cx=\"160\" cy=\"114\" r=\"3.5\" class=\"green-fill\"/><circle cx=\"244\" cy=\"114\" r=\"3.5\" class=\"green-fill\"/><circle cx=\"328\" cy=\"114\" r=\"3.5\" class=\"green-fill\"/>\n<text x=\"244\" y=\"134\" text-anchor=\"middle\" class=\"tiny\">不欲速 · 不见小利</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "无欲速，无见小利。欲速则不达，见小利则大事不成。",
+        "original": ""
+      },
+      "source": {
+        "locator": "《论语·子路》第十七章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E5%AD%90%E8%B7%AF%E7%AC%AC%E5%8D%81%E4%B8%89"
+      }
+    },
+    {
+      "number": 7,
+      "topic": "行事",
+      "title": [
+        "修养仁德的“利器”，",
+        "是身边的贤者与仁者"
+      ],
+      "summary": "子贡问怎样修养仁德。孔子先打比方：工匠要做好活，必先磨快工具；接着点明：住在一个国家，就侍奉那里大夫中的贤者，结交士人中的仁者。这句前半常被单独引用为“工具很重要”，但在原文里，“器”比喻的是修仁时依靠的人。",
+      "diagram_alt": "上下两行对照：比喻行“利其器→善其事”，所指行“事贤者·友仁者→为仁”；左列浅绿底框表示必须先做的根本一步，两行之间用灰色虚线对应。",
+      "diagram_svg": "<text x=\"182\" y=\"24\" text-anchor=\"middle\" class=\"tiny\">必先 · 根本</text>\n<text x=\"420\" y=\"24\" text-anchor=\"middle\" class=\"tiny\">然后</text>\n<text x=\"22\" y=\"72\" class=\"sm\">比喻</text>\n<rect x=\"108\" y=\"48\" width=\"148\" height=\"40\" rx=\"9\" class=\"wash-fill\"/>\n<text x=\"182\" y=\"73\" text-anchor=\"middle\" class=\"strong\">利其器</text>\n<line x1=\"262\" y1=\"68\" x2=\"334\" y2=\"68\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"344.0,68.0 337.0,72.3 337.0,63.7\" class=\"green-fill\"/>\n<rect x=\"348\" y=\"48\" width=\"144\" height=\"40\" rx=\"9\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"420\" y=\"73\" text-anchor=\"middle\" class=\"mid\">善其事</text>\n<line x1=\"182\" y1=\"94\" x2=\"182\" y2=\"138\" class=\"grey-stroke dash\" stroke-width=\"1.3\"/>\n<line x1=\"420\" y1=\"94\" x2=\"420\" y2=\"138\" class=\"grey-stroke dash\" stroke-width=\"1.3\"/>\n<text x=\"196\" y=\"121\" class=\"tiny\">即</text>\n<text x=\"434\" y=\"121\" class=\"tiny\">即</text>\n<text x=\"22\" y=\"168\" class=\"sm\">所指</text>\n<rect x=\"96\" y=\"144\" width=\"172\" height=\"40\" rx=\"9\" class=\"wash-fill\"/>\n<text x=\"182\" y=\"169\" text-anchor=\"middle\" class=\"strong\">事贤者 · 友仁者</text>\n<line x1=\"274\" y1=\"164\" x2=\"334\" y2=\"164\" class=\"green-stroke\" stroke-width=\"2\"/>\n<polygon points=\"344.0,164.0 337.0,168.3 337.0,159.7\" class=\"green-fill\"/>\n<rect x=\"348\" y=\"144\" width=\"144\" height=\"40\" rx=\"9\" class=\"green-stroke\" stroke-width=\"1.5\" fill=\"none\"/>\n<text x=\"420\" y=\"169\" text-anchor=\"middle\" class=\"mid\">为仁</text>\n<text x=\"294\" y=\"212\" text-anchor=\"middle\" class=\"tiny\">“器”在原文里指修仁时依靠的人，不是器物</text>",
+      "quote": {
+        "kind": "quote",
+        "text": "工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。",
+        "original": ""
+      },
+      "source": {
+        "locator": "《论语·卫灵公》第十章",
+        "url": "https://zh.wikisource.org/zh-hans/%E8%AB%96%E8%AA%9E/%E8%A1%9B%E9%9D%88%E5%85%AC%E7%AC%AC%E5%8D%81%E4%BA%94"
+      }
+    }
+  ]
+}
