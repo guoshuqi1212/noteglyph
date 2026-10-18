@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 
-__version__ = '1.3.0'
+__version__ = '1.4.0'
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / 'assets' / 'gallery-template.html'

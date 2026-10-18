@@ -8,7 +8,7 @@
 
 NoteGlyph is an Agent Skill. Give a book, paper or excerpt to your agent (Claude Code, Codex, Cursor and others) and it will:
 
-1. Check the source and pick the claims that have a drawable mechanism (contrast, cause, threshold, feedback…). Claims without one stay in a text outline.
+1. Check the source, list the claims chapter by chapter, and let the content decide how many cards to make: every core claim gets a card, and the deck covers about 80% of the key points. Claims with no drawable mechanism (contrast, cause, threshold, feedback…) stay in a text outline.
 2. Make one card per claim: a two-line conclusion, one mechanism diagram, a labelled quotation and its source.
 3. Deliver a standalone HTML page and a JSON file. The next session continues the numbering from that JSON, and any card can be saved as a PNG.
 
@@ -16,6 +16,7 @@ NoteGlyph is an Agent Skill. Give a book, paper or excerpt to your agent (Claude
 
 - **Shapes have fixed meanings.** Vertical dashes mean contrast, horizontal dashes mean a threshold, a tinted box marks a foundation, the dark circle is “you”, a dotted green line is exploration. A symbol means the same thing on every card, so a deck gets faster to read. Gray-versus-green value contrasts appear only when the source itself makes that judgment. See the [visual grammar](references/design-system.md) (Chinese).
 - **Sources are required.** Every quotation is labelled Quote, Quote / Translation, Paraphrase or Editorial. Cards without a source fail validation, and cross-chapter synthesis must carry an editor’s note. See the [source policy](references/source-policy.md) (Chinese).
+- **The book sets the card count.** There is no fixed number. The agent lists candidate claims from every chapter, ranks them, cards every core claim, covers about 80% of the key points, and tells you what is still missing.
 - **Decks keep growing.** Numbering runs through the whole book, and the outline marks each item as carded or not yet carded.
 
 ## Demos
@@ -44,7 +45,9 @@ This installs into the current project; add `-g` for a global install. You can a
 
 Then ask:
 
-> Use NoteGlyph to turn this book into visual notes in English. Check the source first, make cards for the eight claims with the clearest mechanisms, and put the rest in the outline.
+> Use NoteGlyph to turn this book into visual notes in English. Check the source first, let the content decide how many cards to make, card every core claim so the deck covers about 80% of the book, and put the rest in the outline.
+
+You can still ask for a fixed number, such as “make 12 cards”. If that is too few for the core claims, the agent will say which ones are left out.
 
 Finding and checking the source depends on what your agent can read. The renderer itself works offline and does not parse PDFs.
 

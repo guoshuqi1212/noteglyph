@@ -80,7 +80,8 @@ v1.2 的旧写法仍然有效：`kind` 写中文标签，`zh` / `en` 两个字�
 ## 编号与 `outline_entries`
 
 - `cards[].number` 升序、不重复。没有 `outline_entries` 时必须连续。
-- 先整理长文时，把全部候选写进 `outline_entries`：编号整体连续，每条有 `number`、`topic`、`title`、`summary`，可选 `source`。
+- 先整理长文时，把全部候选写进 `outline_entries`：编号整体连续，每条有 `number`、`topic`、`title`、`summary`，可选 `source`。整本书就列全书的候选，不只列已制卡的。
+- 卡片张数没有上限，渲染器也不限制数量；张数由内容决定（见 `SKILL.md` 规则 ④）。
 - 已制卡的编号必须出现在 `outline_entries` 里；提要视图会把它们标成“已制卡 ✓”，其余标“待制卡”。
 
 ```json
